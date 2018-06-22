@@ -11,17 +11,7 @@ import { throwError } from "rxjs/internal/observable/throwError";
 export class AppComponent {
   public title = 'Mimo coding challenge';
   constructor(
-    private lessonDataService: LessonDataService
   ) {
-    lessonDataService.getLessonsAPIResponse().subscribe(
-      data => {
-        console.log("====> API RECEIVED: ", data);
-        return true;
-      },
-      error => {
-        console.error("[ERROR] There is a problem getting lessons from API");
-        return throwError(error);
-      }
-    )
+
   }
 }

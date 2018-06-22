@@ -1,0 +1,6 @@
+<div>Lesson name: {{lessonId}}</div><br>
+
+<tap-interaction [lessonContent]="lessonContent" (continueButtonVisibility)="continueVisibilityChanged($event)"></tap-interaction><br>
+
+
+<input *ngIf="lessonInput" type="text" (input)="updateValue($event)" type="number" required>

@@ -12,7 +12,6 @@ export class LessonDataService {
   constructor(
     private http:HttpClient
   ) {
-
   }
 
   public getLessonsAPIResponse() {

@@ -1,0 +1,10 @@
+<p>{{instructionMessage}}</p>
+
+<!-- placeholders for the interaction -->
+<div *ngFor="let content of lessonContent; let i = index" id="{{'placeholder'+i}}" class="divPlaceholder" attr.data-id="{{i}}" attr.data-is-filled="{{false}}" >
+</div><br>
+
+<!-- blocks with data received from Api -->
+<button *ngFor="let content of lessonContent; let i = index" id="{{'content'+i}}" class="divContentBlock" attr.data-id="{{i}}" attr.data-default-id="{{content.defaultOrderId}}" attr.data-is-used="{{false}}" (click)="clickedOnItem(i)" attr.data-placeholder-filled="-1">
+  <span [ngStyle]="{'color': content.color}">{{ content.text }}</span>
+</button>

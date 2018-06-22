@@ -1,0 +1,15 @@
+.lesson-manager {
+  text-align: center;
+  padding: 20px;
+}
+
+.btn-continue {
+  position: relative;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #ffffff;
+  border-color: #4CAF50;
+  width: 200px;
+  margin: 50px auto auto auto;
+  cursor:pointer;
+}

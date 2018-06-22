@@ -1,0 +1,13 @@
+<div class="lesson-manager">
+  <div id="lessonContainer" *ngIf="visibleLesson">
+
+    <p>Progress: {{lessonsProgress + " %"}}</p>
+
+    <!-- lesson with interaction -->
+    <lesson [lessonData]="currentLesson" (continueButtonActive)="continueButtonStateUpdate($event)"></lesson>
+
+    <!-- continue button -->
+    <button (click)="clickContinue()" class="btn-continue" *ngIf="showContinueButton && !showFinishText">Continue</button>
+    <div *ngIf="showFinishText">Done</div>
+  </div>
+</div>
